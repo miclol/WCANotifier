@@ -1,0 +1,115 @@
+body {
+    font-family: "Rubik", Tahoma, Verdana, "Trebuchet MS", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background: url(./img/fabric.png) repeat 0 0;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    display: inline;
+    vertical-align: middle;
+    margin: 0px 8px;
+}
+
+p {
+    text-align: center;
+}
+
+form {
+    margin: 24px 4px;
+}
+
+footer {
+    margin-top: 36px;
+    margin-bottom: 18px;
+    font-size: 12px;
+    color: #696969;
+}
+
+select {
+    display: block;
+}
+
+input {
+    font-family: "Rubik", Tahoma, Verdana, "Trebuchet MS", sans-serif;
+}
+
+a {
+	margin: 0px 8px;
+	color: #696969;
+}
+
+[type="text"], [type="email"], [type="number"] {
+    display: block;
+}
+
+[type="button"] {
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-right: 2px;
+}
+
+[type="submit"] {
+    padding: 4px 12px;
+    font-size: 20px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: block;
+}
+
+[type="date"] {
+    margin-right: 24px;
+}
+
+.disclaimer {
+    font-size: 14px;
+    margin: 8px;
+}
+
+.heading {
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 32px;
+    margin-bottom: 4px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.description {
+	font-weight: 500;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}	
+
+.cube {
+    height: 48px;
+    width: 48px;
+}
+
+.buttons {
+    display: block;
+    margin-top: 8px;
+}
+
+.dates {
+    display: block;
+}
+
+.nonaffiliation {
+	margin: 0px 8px;
+}
+
+.links {
+	text-align: center;
+	margin: auto;
+	width: 50%;
+}
+
+:disabled {
+    cursor: not-allowed;
+}

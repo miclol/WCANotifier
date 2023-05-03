@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WCA Notifier</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Rubik:400,500" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBM9uHDUCFhgPrQffoMU4G1HktIPfpVtQc&libraries=places&callback=initAutocomplete"></script>
+</head>
+<body>
+    <div class="title">
+        <h1>WCA Notifier</h1>
+        <img class="cube" src="./img/cube.png">
+    </div>
+	<p class="description">A Service that notifies you of relevant cubing competitions by Email.</p>
+    <p class="disclaimer">Disclaimer: This service only notifies you when a competition gets announced. To get notified when a specific competition opens for registration, please use the Bookmark system in the WCA Website.</p>
+        <form onsubmit="validate()" action="https://pjnwribfowbtfwzskc6tpagzfm0qheem.lambda-url.us-east-2.on.aws/" method="post">
+            <label for="email" class="heading">The email the notifications will go to:</label>
+            <input id="email" name="email" type="email" required/>
+            <label class="heading">Events you want to be notified for: (Please check at least one)</label>
+            <br>
+            <input type="checkbox" id="222" value="222">
+            <label for="222">2x2x2 Cube</label>
+            <br>
+            <input type="checkbox" id="333" value="333">
+            <label for="333">3x3x3 Cube</label>
+            <br>
+            <input type="checkbox" id="444" value="444">
+            <label for="444">4x4x4 Cube</label>
+            <br>
+            <input type="checkbox" id="555" value="555">
+            <label for="555">5x5x5 Cube</label>
+            <br>
+            <input type="checkbox" id="666" value="666">
+            <label for="666">6x6x6 Cube</label>
+            <br>
+            <input type="checkbox" id="777" value="777">
+            <label for="777">7x7x7 Cube</label>
+            <br>
+            <input type="checkbox" id="333bf" value="333bf">
+            <label for="333bf">3x3x3 Blindfold</label>
+            <br>
+            <input type="checkbox" id="444bf" value="444bf">
+            <label for="444bf">4x4x4 Blindfold</label>
+            <br>
+            <input type="checkbox" id="555bf" value="555bf">
+            <label for="555bf">5x5x5 Blindfold</label>
+            <br>
+            <input type="checkbox" id="333mbf" value="333mbf">
+            <label for="333mbf">3x3x3 Multi-Blind</label>
+            <br>
+            <input type="checkbox" id="333fm" value="333fm">
+            <label for="333fm">3x3x3 Fewest Moves</label>
+            <br>
+            <input type="checkbox" id="333oh" value="333oh">
+            <label for="333oh">3x3x3 One-handed</label>
+            <br>
+            <input type="checkbox" id="clock" value="clock">
+            <label for="clock">Clock</label>
+            <br>
+            <input type="checkbox" id="minx" value="minx">
+            <label for="minx">Megaminx</label>
+            <br>
+            <input type="checkbox" id="pyram" value="pyram">
+            <label for="pyram">Pyraminx</label>
+            <br>
+            <input type="checkbox" id="skewb" value="skewb">
+            <label for="skewb">Skewb</label>
+            <br>
+            <input type="checkbox" id="sq1" value="sq1">
+            <label for="sq1">Square-1</label>
+            <br>
+            <input type="hidden" name="events" id="events">
+            <div class="buttons">
+                <input type="button" value="Select All" onclick="setCheckbox(true)">
+                <input type="button" value="Deselect All" onclick="setCheckbox(false)">
+            </div>
+            <label for="autocomplete" class="heading">The [area around a] city you want to be notified for: (Leave blank for unlimited range)</label>
+            <input id="autocomplete" placeholder="" type="text"/>
+            <input id="latitude" name="latitude" type="hidden"/>
+            <input id="longitude" name="longitude" type="hidden"/>
+            <input id="country" name="country" type="hidden"/>
+            <label for="radius" id="radiusLabel" class="heading">The radius (in km) around a city to check:</label>
+            <input id="radius" name="radius" type="number" min="1" max="15000" class="cityControlled" disabled required/>
+            <label for="crossCountry" class="heading">Do you want to be notified of competitions across country borders?</label>
+            <select id="crossCountry" name="crossCountry" class="cityControlled" disabled>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+            <label for="fee" class="heading">Registration fee limit: (Leave blank for unlimited budget)</label>
+            <input id="fee" name="fee" type="number" class="cityControlled" disabled/>
+            <label for="fee" id="currLabel"></label>
+            <input hidden name="curr" id="curr">
+            <label id="datesLabel" class="heading">Date range to check for [Dates are processed using computer local time]: (Leave a date blank for all dates before and/or all dates after)</label>
+            <div class="dates">
+                <label for="start">Start: </label>
+                <input id="start" type="date" onchange="updateTime()"/>
+                <label for="end">End: </label>
+                <input id="end" type="date" onchange="updateTime()"/>
+            </div>
+            <input id="startUnix" type="hidden" name="start">
+            <input id="endUnix" type="hidden" name="end">
+            <input type="submit"/>
+        </form>
+    </body>
+    <footer>
+		<p class="nonaffiliation">This website and service is not affiliated with the World Cube Association.</p>
+		<div class="links">
+			<a href="https://github.com/miclol/WCANotifier">Source Code</a>
+			<a href="https://github.com/miclol/WCANotifier/issues">Report Issues</a>
+    </footer>
+</html>
