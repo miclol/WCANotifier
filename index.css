@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Rubik:400,500);
+@import url(//fonts.googleapis.com/css?family=Rubik:400,500,600);
 
 body {
     font-family: "Rubik", Tahoma, Verdana, "Trebuchet MS", sans-serif;
@@ -9,7 +9,7 @@ body {
 
 h1 {
     font-size: 40px;
-    font-weight: bold;
+    font-weight: 600;
     display: inline;
     vertical-align: middle;
     margin: 0px 8px;
