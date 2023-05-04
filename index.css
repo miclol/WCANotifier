@@ -56,8 +56,6 @@ a {
 [type="submit"] {
     padding: 4px 12px;
     font-size: 20px;
-    margin-top: 32px;
-    margin-bottom: 32px;
     display: block;
 }
 
@@ -110,6 +108,11 @@ a {
 	text-align: center;
 	margin: auto;
 	width: 50%;
+}
+
+.g-recaptcha {
+	margin-top: 32px;
+	margin-bottom: 16px;
 }
 
 :disabled {
