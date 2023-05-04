@@ -15,7 +15,7 @@ h1 {
     margin: 0px 8px;
 }
 
-p {
+p:not(.km) {
     text-align: center;
 }
 
@@ -43,7 +43,7 @@ a {
 	color: #696969;
 }
 
-[type="text"], [type="email"], [type="number"] {
+[type="text"], [type="email"], [type="number"]:not(.km) {
     display: block;
 }
 
@@ -96,8 +96,8 @@ a {
     margin-top: 8px;
 }
 
-.dates {
-    display: block;
+.km {
+	display: inline;
 }
 
 .nonaffiliation {

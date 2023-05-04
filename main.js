@@ -25,7 +25,7 @@ function onPlaceChanged() {
         document.getElementById("longitude").value = "";
         document.getElementById("country").value = "";
         minOffset = new Date().getTimezoneOffset();
-        document.getElementById("radiusLabel").innerHTML = "The radius (in km) around a city to check:";
+        document.getElementById("radiusLabel").innerHTML = "The radius (in km) around the center of the city to check:";
         document.getElementById("datesLabel").innerHTML = "Date range to check for [Dates are processed using computer local time]: (Leave a date blank for all dates before and/or all dates after)";
         Array.from(document.getElementsByClassName("cityControlled")).forEach(function(item, _) {item.disabled = true});
         document.getElementById("curr").value = "";
@@ -52,7 +52,7 @@ function onPlaceChanged() {
         document.getElementById("latitude").value = lat;
         document.getElementById("longitude").value = lng;
         document.getElementById("country").value = country.long_name;
-        document.getElementById("radiusLabel").innerHTML = `The radius (in km) around <strong>${city}</strong> to check:`;
+        document.getElementById("radiusLabel").innerHTML = `The radius (in km) around the center of <strong>${city}</strong> to check:`;
         document.getElementById("datesLabel").innerHTML = `Date range to check for [Dates are processed in <strong>${city}</strong> time]: (Leave a date blank for all dates before and/or all dates after)`;
         Array.from(document.getElementsByClassName("cityControlled")).forEach(function(item, _) {item.disabled = false});
         if (disableFee) {

@@ -78,13 +78,16 @@
                 <input type="button" value="Select All" onclick="setCheckbox(true)">
                 <input type="button" value="Deselect All" onclick="setCheckbox(false)">
             </div>
-            <label for="autocomplete" class="heading">The [area around a] city you want to be notified for: (Leave blank for unlimited range)</label>
+            <label for="autocomplete" class="heading">Which city's area around it do you want to be notified for: (Leave blank for unlimited range)</label>
             <input id="autocomplete" placeholder="" type="text"/>
             <input id="latitude" name="latitude" type="hidden"/>
             <input id="longitude" name="longitude" type="hidden"/>
             <input id="country" name="country" type="hidden"/>
-            <label for="radius" id="radiusLabel" class="heading">The radius (in km) around a city to check:</label>
-            <input id="radius" name="radius" type="number" min="1" max="15000" class="cityControlled" disabled required/>
+            <label for="radius" id="radiusLabel" class="heading">The radius (in km) around the center of the city to check:</label>
+            <div class="radius">
+				<input id="radius" name="radius" type="number" min="1" max="15000" class="cityControlled km" disabled required/>
+				<p class="km">kilometers</p>
+			</div>
             <label for="crossCountry" class="heading">Do you want to be notified of competitions across country borders?</label>
             <select id="crossCountry" name="crossCountry" class="cityControlled" disabled>
                 <option value="no">No</option>
