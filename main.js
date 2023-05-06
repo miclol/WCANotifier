@@ -106,8 +106,12 @@ function getFirstResult() {
 	google.maps.event.trigger(this, "keydown", ev2);
 }
 
-function recaptchaCallback(value) {
-    document.getElementById("submit").disabled = value;
+function recaptchaDone() {
+    document.getElementById("submit").disabled = false;
+}
+
+function recaptchaExpired() {
+    document.getElementById("submit").disabled = true;
 }
 
 $(document).ready(function() {
