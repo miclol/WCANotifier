@@ -39,7 +39,6 @@ input {
 }
 
 a {
-	margin: 0px 8px;
 	color: #696969;
 }
 
@@ -113,6 +112,10 @@ a {
 .g-recaptcha {
 	margin-top: 32px;
 	margin-bottom: 16px;
+}
+
+.footer {
+	margin: 0px 8px;
 }
 
 :disabled {

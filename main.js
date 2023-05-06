@@ -106,6 +106,10 @@ function getFirstResult() {
 	google.maps.event.trigger(this, "keydown", ev2);
 }
 
+function recaptchaCallback(value) {
+    document.getElementById("submit").disabled = value;
+}
+
 $(document).ready(function() {
     $(window).keydown(function(event) {
         if (event.keyCode == 13) {
