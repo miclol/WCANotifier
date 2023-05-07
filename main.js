@@ -31,7 +31,6 @@ function onPlaceChanged() {
         document.getElementById("curr").value = "";
         document.getElementById("currLabel").innerHTML = "";
     } else {
-		console.log(place)
         var city = place.address_components.at(0).long_name;
         var currency;
         if (place.address_components.length == 1) {
