@@ -31,6 +31,7 @@ function onPlaceChanged() {
         document.getElementById("curr").value = "";
         document.getElementById("currLabel").innerHTML = "";
     } else {
+		console.log(place)
         var city = place.address_components.at(0).long_name;
         var currency;
         if (place.address_components.length == 1) {
@@ -51,7 +52,7 @@ function onPlaceChanged() {
         autoComp.value = place.formatted_address;
         document.getElementById("latitude").value = lat;
         document.getElementById("longitude").value = lng;
-        document.getElementById("country").value = country.long_name;
+        document.getElementById("country").value = country.short_name;
         document.getElementById("radiusLabel").innerHTML = `The radius (in km) around the center of <strong>${city}</strong> to check:`;
         document.getElementById("datesLabel").innerHTML = `Date range to check for [Dates are processed in <strong>${city}</strong> time]: (Leave a date blank for all dates before and/or all dates after)`;
         Array.from(document.getElementsByClassName("cityControlled")).forEach(function(item, _) {item.disabled = false});

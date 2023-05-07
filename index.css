@@ -42,7 +42,7 @@ a {
 	color: #696969;
 }
 
-[type="text"], [type="email"], [type="number"]:not(.km) {
+[type="text"], [type="email"] {
     display: block;
 }
 
@@ -69,7 +69,7 @@ a {
 
 .heading {
     font-weight: 500;
-    display: inline-block;
+    display: block;
     margin-top: 32px;
     margin-bottom: 4px;
 }
