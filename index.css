@@ -46,10 +46,14 @@ a {
     display: block;
 }
 
+[type="checkbox"] {
+	margin-bottom: 6px;
+}
+
 [type="button"] {
     padding: 2px 6px;
     font-size: 14px;
-    margin-right: 2px;
+    margin-right: 8px;
 }
 
 [type="submit"] {
