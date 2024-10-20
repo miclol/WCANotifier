@@ -4,7 +4,7 @@ A Service to notify you of relevant cubing competitions by Email.
 
 The website is hosted [here](https://miclol.github.io/WCANotifier/).
 
-The backend repo is [here](https://miclol.github.io/WCANotifierServer/).
+The backend repo is [here](https://github.com/miclol/WCANotifierServer/).
 
 ***
 
